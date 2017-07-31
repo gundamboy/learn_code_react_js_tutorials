@@ -9,9 +9,7 @@ class App extends Component {
   render() {    
     return (
         <HashRouter>
-          <div>
             <Route path="/" component={Layout} />
-          </div>
         </HashRouter>
     );
   }

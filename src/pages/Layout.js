@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Footer from '../components/layout/Footer';
 import Nav from '../components/layout/Nav';
 import Favorites from "../pages/Favorites";
@@ -17,18 +17,17 @@ export default class Layout extends React.Component {
 			<div>
 				<Nav  location={location} />
 			  	
-			  	<div className="contaier" style={containerStyle}>
-			  		<div>
-			  			<Route path='/' component={Todos} />
-						<Route path="/favorites" name="favorites" component={Favorites} />
-			  			<Route path="/settings" name="settings" component={Settings} />
-			  		</div>
+			  	<div className="contaier">
 			  		<div className="row">
 			  			<div className="col-lg-12">
-							{this.props.children}
+
+							<Route path="/favorites" name="favorites" component={Favorites} />
+				  			<Route path="/settings" name="settings" component={Settings} />
+				  			<Route exact path='/' component={Todos} />
+
 			  			</div>
 			  		</div>
-			  		{/* <Footer/> */}
+			  		<Footer/>
 			  	</div>
 		  	</div>
 		);

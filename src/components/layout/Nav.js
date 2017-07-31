@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default class Nav extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
       collapsed: true,
     };
@@ -18,7 +18,7 @@ export default class Nav extends React.Component {
     const { location } = this.props;
     const { collapsed } = this.state;
     const todosClass = location.pathname === "/" ? "active" : "";
-    const favoritesClass = location.pathname.match(/^\/archives/) ? "active" : "";
+    const favoritesClass = location.pathname.match(/^\/favorites/) ? "active" : "";
     const settingsClass = location.pathname.match(/^\/settings/) ? "active" : "";
     const navClass = collapsed ? "collapse" : "";
 
@@ -42,7 +42,7 @@ export default class Nav extends React.Component {
                 <Link to="/favorites" onClick={this.toggleCollapse.bind(this)}>Favorites</Link>
               </li>
               <li className={settingsClass}>
-                <Link to="settings" onClick={this.toggleCollapse.bind(this)}>Settings</Link>
+                <Link to="/settings" onClick={this.toggleCollapse.bind(this)}>Settings</Link>
               </li>
             </ul>
           </div>
