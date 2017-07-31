@@ -2,6 +2,7 @@ import React from 'react';
 
 import Todo from "../components/Todo";
 import TodoStore from "../stores/TodoStore";
+import * as TodoActions from "../actions/TodoActions"
 
 export default class Todos extends React.Component {
   constructor() {
@@ -19,6 +20,10 @@ export default class Todos extends React.Component {
       });
   }
 
+  createTodo() {
+    TodoActions.createTodo(Date.now());
+  }
+
   render() {
     const { todos } = this.state;
     const TodoComponents = todos.map((todo) => {
@@ -27,6 +32,7 @@ export default class Todos extends React.Component {
 
     return (
       <div>
+        <button onClick={this.createTodo.bind(this)}>Add Todo</button>
       	<h1>Todos</h1>
       	<ul className="list-unstyled">{TodoComponents}</ul>
       </div>
