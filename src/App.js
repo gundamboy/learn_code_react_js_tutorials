@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch, HashRouter } from 'react-router-dom';
-import Bootstrap from 'bootstrap.native';
 import './App.css';
-
-
-import Footer from "./components/layout/Footer";
-import Header from "./components/layout/Header";
 import Layout from "./pages/Layout";
 
 
@@ -16,9 +11,6 @@ class App extends Component {
         <HashRouter>
           <div>
             <Route path="/" component={Layout} />
-            
-            
-            
           </div>
         </HashRouter>
     );
