@@ -16,7 +16,7 @@ export default class Layout extends React.Component {
 		return (
 			<div>
 				<Nav  location={location} />
-			  	
+
 			  	<div className="contaier">
 			  		<div className="row">
 			  			<div className="col-lg-12">
@@ -32,4 +32,4 @@ export default class Layout extends React.Component {
 		  	</div>
 		);
 	}
-} 
+}

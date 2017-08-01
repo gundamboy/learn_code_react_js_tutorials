@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default class Todo extends React.Component {
 	constructor(prpos) {
 		super();
